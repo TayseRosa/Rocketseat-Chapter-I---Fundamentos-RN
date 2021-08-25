@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
     TouchableOpacity, 
@@ -11,14 +10,17 @@ interface ButtonProps extends TouchableOpacityProps{
     title: string
 }
 
-export function Button({ title, ...rest } :ButtonProps ){
+export function Button({title,  ...rest } :ButtonProps ){
     return(
         <TouchableOpacity 
             style={styles.button}
+            
             {...rest}
         >
       
-        <Text style={styles.buttonText}>Add</Text>
+        <Text style={styles.buttonText}>
+            {title} 
+        </Text>
         
         </TouchableOpacity>
     )
